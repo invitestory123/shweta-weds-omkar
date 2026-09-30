@@ -1,17 +1,35 @@
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let motionPaused=reducedMotion;
 const entrance=document.querySelector('#entrance');
+const openingVideo=document.querySelector('#opening-video');
+let openingStarted=false;
+function finishOpening(){
+  openingStarted=false;
+  openingVideo.pause();
+  entrance.classList.add('finished');
+  document.body.classList.remove('at-entrance');
+  document.querySelector('#invitation').focus({preventScroll:true});
+  window.scrollTo(0,0);
+  observeScenes();
+}
 document.querySelector('#open-invitation').addEventListener('click',()=>{
+  if(openingStarted)return;
+  openingStarted=true;
+  if(reducedMotion){finishOpening();return;}
   entrance.classList.add('opening');
-  setTimeout(()=>{entrance.classList.add('finished');document.body.classList.remove('at-entrance');document.querySelector('#invitation').focus({preventScroll:true});window.scrollTo(0,0);observeScenes();},reducedMotion?0:3000);
+  openingVideo.currentTime=0;
+  openingVideo.play().catch(finishOpening);
 });
+openingVideo.addEventListener('ended',finishOpening);
+openingVideo.addEventListener('error',()=>{if(openingStarted)finishOpening();});
+document.querySelector('.opening-skip').addEventListener('click',e=>{e.preventDefault();finishOpening();});
 document.querySelector('#motion-toggle').addEventListener('click',()=>setMotion(!motionPaused));
-function setMotion(paused){motionPaused=paused;document.body.classList.toggle('motion-paused',paused);const b=document.querySelector('#motion-toggle');b.textContent=paused?'Play motion':'Pause motion';b.setAttribute('aria-pressed',String(paused));document.querySelectorAll('video').forEach(v=>paused?v.pause():v.play().catch(()=>{}));}
+function setMotion(paused){motionPaused=paused;document.body.classList.toggle('motion-paused',paused);const b=document.querySelector('#motion-toggle');b.textContent=paused?'Play motion':'Pause motion';b.setAttribute('aria-pressed',String(paused));document.querySelectorAll('video').forEach(v=>paused?v.pause():(v===openingVideo&&!openingStarted?undefined:v.play().catch(()=>{})));}
 function observeScenes(){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');const v=e.target.querySelector('video');if(v&&!motionPaused)v.play().catch(()=>{});observer.unobserve(e.target)}}),{threshold:.25});document.querySelectorAll('[data-scene]').forEach(el=>observer.observe(el));}
 setMotion(motionPaused);
 function releasePetals(){if(motionPaused)return;const host=document.querySelector('#petals');for(let i=0;i<14;i++){const petal=document.createElement('i');petal.className='petal';petal.style.left=`${i%2?82+Math.random()*12:Math.random()*12}%`;petal.style.animationDelay=`${Math.random()*2}s`;petal.style.animationDuration=`${7+Math.random()*3}s`;host.append(petal);petal.addEventListener('animationend',()=>petal.remove());}}
 const handsObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){setTimeout(releasePetals,reducedMotion?0:2300);handsObserver.disconnect();}},{threshold:.4});handsObserver.observe(document.querySelector('#together'));
-document.querySelector('#replay-entrance').addEventListener('click',()=>{entrance.classList.remove('finished','opening');document.body.classList.add('at-entrance');window.scrollTo(0,0);document.querySelector('#open-invitation').focus();});
+document.querySelector('#replay-entrance').addEventListener('click',()=>{openingStarted=false;openingVideo.pause();openingVideo.currentTime=0;entrance.classList.remove('finished','opening');document.body.classList.add('at-entrance');window.scrollTo(0,0);document.querySelector('#open-invitation').focus();});
 const tabs=[...document.querySelectorAll('[role=tab]')];
 function selectTab(tab){tabs.forEach(t=>{const selected=t===tab;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!selected;});}
 tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(tabs[next]);tabs[next].focus();}});});
@@ -26,4 +44,4 @@ fetch('invitation.json').then(r=>{if(!r.ok)throw new Error('Invitation unavailab
   if(config.weddingDate)document.querySelector('#date-value').textContent=config.weddingDate;
   Object.entries(config.videos||{}).forEach(([name,src])=>{if(!src)return;const target=name==='door'?document.querySelector('.door-art'):document.querySelector(`[data-scene="${name}"]`);if(!target)return;const video=document.createElement('video');video.className='scene-video';video.muted=true;video.playsInline=true;video.preload='metadata';video.src=src;video.poster=target.querySelector('.scene-first,.door-closed')?.src||'';video.setAttribute('aria-hidden','true');video.addEventListener('error',()=>video.remove());if(name==='door'){target.append(video);video.pause();document.querySelector('#open-invitation').addEventListener('click',()=>{if(!motionPaused)video.play().catch(()=>{});});}else{target.insertBefore(video,target.querySelector('.hands-caption,.blessing-copy,.family-copy,.ceremony-copy,.reception-copy'));if(target.classList.contains('is-visible')&&!motionPaused)video.play().catch(()=>{});}});
 }).catch(()=>{});
-document.querySelector('.skip').addEventListener('click',()=>{entrance.classList.add('finished');document.body.classList.remove('at-entrance');observeScenes();});
+document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();finishOpening();});
