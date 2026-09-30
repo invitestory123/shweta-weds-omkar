@@ -1,0 +1,80 @@
+{
+  "couple": {
+    "groom": "Omkar Chavan",
+    "bride": "Shweta Dagade",
+    "groomParents": "Umesh Chavan and Lata Chavan",
+    "brideParents": "Mahadev Dagade and Madhuri Dagade"
+  },
+  "weddingDate": null,
+  "venue": {
+    "name": "Mango Leaf Lake Resort",
+    "location": "Khadakwasla, Pune"
+  },
+  "events": [
+    {
+      "name": "Vidhi",
+      "time": "4:00 PM onwards"
+    },
+    {
+      "name": "Mangalashtaka",
+      "time": "5:40 PM"
+    },
+    {
+      "name": "Dinner & Reception",
+      "time": "8:30 PM onwards"
+    }
+  ],
+  "blessing": "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥",
+  "attire": {
+    "wedding": {
+      "ladies": [
+        "Paithani saree",
+        "Kanjivaram saree",
+        "Chikankari saree",
+        "Banarasi saree"
+      ],
+      "gentlemen": [
+        "Sherwani set",
+        "Kurta set",
+        "Traditional kurta set",
+        "Nehru jacket set"
+      ],
+      "colors": [
+        "#ad214c",
+        "#d99b96",
+        "#dca34e",
+        "#20573f",
+        "#b38a43"
+      ]
+    },
+    "reception": {
+      "ladies": [
+        "Embellished lehenga",
+        "Heavy lehenga",
+        "Draped saree",
+        "Indian gown"
+      ],
+      "gentlemen": [
+        "Classic tuxedo",
+        "Formal suit",
+        "Bandhgala set",
+        "Modern suit"
+      ],
+      "colors": [
+        "#b38a43",
+        "#b88979",
+        "#162e4c",
+        "#623151",
+        "#927775"
+      ]
+    }
+  },
+  "videos": {
+    "door": null,
+    "hands": null,
+    "blessing": null,
+    "family": null,
+    "ceremony": null,
+    "reception": null
+  }
+}

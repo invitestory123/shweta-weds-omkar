@@ -1,0 +1,39 @@
+WEDDING WEBSITE — GOOGLE FLOW HANDOFF
+
+The website currently uses matching still frames with gentle fades. It does not yet contain generated videos. Generate the six clips below, then place the MP4 files in dist/assets and enter their relative paths in dist/invitation.json under videos. Text-free backgrounds allow names and times to remain sharp website text.
+
+1. door — 01-door-first.jpg → 01-door-last.png — 6 seconds
+Locked frontal camera. Carved double doors swing open slowly and symmetrically on their outer hinges. Preserve garlands, arch, vessels, lamps and foliage. Reveal the warm ivory interior. No people or new text. Hold the end for one second.
+
+2. hands — 02-hands-first.png → 02-hands-last.png — 5 seconds
+Locked camera. Blue hand with rudraksha and bridal hand with mehndi approach gently, touch fingertips, then clasp. Preserve anatomy, jewelry, monogram and painted style. No extra fingers, no background changes. Hold the final clasp.
+
+3. blessing — 03-blessing-first.png → 03-blessing-last.png — 5 seconds
+Fixed camera. Very slight hanging lamp sway, flame flicker and sparse drifting lotus petals along the edges. Ganesh mark and palace architecture remain still. Keep all blank areas empty. No text.
+
+4. family — 04-family-first.png → 04-family-last.png — 5 seconds
+Fixed camera. Tiny sway of the free red fabric edge, light petal fall along outer edges, gentle lamp flame flicker. Tied garments and feet remain consistent. No walking, no extra people, no text.
+
+5. ceremony — 05-ceremony-first.png → 05-ceremony-last.png — 6 seconds
+Fixed camera. Soft ripples on the lake, a gentle breeze through flowers, a restrained natural lean of the seated couple. Preserve bodies, clothes and architecture. Keep upper blank area empty. No text or camera movement.
+
+6. reception — 06-reception-first.png → 06-reception-last.png — 6 seconds
+Fixed camera. Warm string lights softly brighten, lake reflections shimmer, a few petals drift along outer edges. Couple and pavilion stay still. Keep blank sky clear for website text. No new guests or text.
+
+All frame pairs live in ../assets/flow. They retain the reference's portrait framing. Set Flow's framing to match each supplied image and prevent reframing.
+
+Example configuration after videos are ready:
+"videos": {
+  "door": "assets/door.mp4",
+  "hands": "assets/hands.mp4",
+  "blessing": "assets/blessing.mp4",
+  "family": "assets/family.mp4",
+  "ceremony": "assets/ceremony.mp4",
+  "reception": "assets/reception.mp4"
+}
+
+Set weddingDate to the confirmed wording, for example a complete written date. Keep null until confirmed. Current guest copy says Date to be announced.
+
+The date scratching, petals, section links, motion toggle and dress-code tabs are website interactions, so they do not require a video frame pair. The dress-code guide is intentionally static for reading.
+
+Built-in image generation created the artwork. The original PDF remains unchanged. Detailed generation prompts are in ../assets/flow/section-frame-prompts.txt and ../assets/flow/FLOW-PROMPTS.txt.
