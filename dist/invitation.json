@@ -5,7 +5,7 @@
     "groomParents": "Umesh Chavan and Lata Chavan",
     "brideParents": "Mahadev Dagade and Madhuri Dagade"
   },
-  "weddingDate": null,
+  "weddingDate": "18 December 2026",
   "venue": {
     "name": "Mango Leaf Lake Resort",
     "location": "Khadakwasla, Pune"
@@ -70,8 +70,8 @@
     }
   },
   "videos": {
-    "door": null,
-    "hands": null,
+    "door": "assets/door.mp4",
+    "hands": "assets/hands.mp4",
     "blessing": null,
     "family": null,
     "ceremony": null,
