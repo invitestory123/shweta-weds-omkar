@@ -1,11 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+Devanagari:wght@400;500&display=swap');
-:root{--paper:#f8eddd;--ink:#4d3629;--wine:#91243d;--gold:#91652f;--line:#cfb894;--serif:'Cormorant Garamond',Georgia,serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:20px;line-height:1.5}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--wine);outline-offset:5px}.skip{position:fixed;left:12px;top:-100px;z-index:100;background:var(--paper);padding:12px}.skip:focus{top:12px}.eyebrow{font-family:Georgia,serif;font-size:12px;letter-spacing:.15em;text-transform:uppercase;line-height:1.8}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-weight:500;line-height:1.05}h2{font-size:clamp(38px,5vw,68px);color:var(--wine);margin-bottom:24px}h3{font-size:34px}button.button,.button{display:inline-block;border:1px solid var(--wine);background:var(--wine);color:#fff5e6;padding:13px 26px;text-decoration:none;font-size:18px}.text-link{text-underline-offset:7px;font-size:18px}.entrance{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;background:#24170f;overflow:hidden;transition:opacity .7s ease}.entrance.fading-out{opacity:0;pointer-events:none}.door-art{position:relative;width:min(100%,575px);height:100svh;perspective:1200px;overflow:hidden}.door-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.door-open{z-index:1}.door-wings{position:absolute;inset:0;z-index:2;perspective:1200px;pointer-events:none}.door-wing{position:absolute;top:0;bottom:0;width:50.2%;background-image:url('assets/01-door-first.jpg');background-size:200% 100%;background-repeat:no-repeat;transition:transform 3.2s cubic-bezier(.22,1,.36,1),opacity .6s ease 2.6s;backface-visibility:hidden}.door-wing-left{left:0;background-position:left center;transform-origin:14% center}.door-wing-right{right:0;background-position:right center;transform-origin:86% center}.entrance.opening .door-wing-left{transform:rotateY(-88deg);opacity:.15}.entrance.opening .door-wing-right{transform:rotateY(88deg);opacity:.15}.entrance-copy{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:min(85%,470px);text-align:center;background:rgba(248,237,221,.96);padding:22px 18px;border:1px solid #d3b383;transition:opacity .5s ease,transform .5s ease}.entrance-copy h1{font-size:clamp(37px,5vw,52px);color:var(--wine);margin-bottom:20px}.entrance-copy h1 span{font-style:italic;color:var(--gold)}.entrance-copy .eyebrow{margin-bottom:9px}.entrance.opening .entrance-copy{opacity:0;transform:translate(-50%,15px);pointer-events:none}.entrance.finished{display:none}.at-entrance .site-header,.at-entrance main{display:none}.site-header{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 5vw;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}.brand{font-size:28px;text-decoration:none;white-space:nowrap;color:var(--wine)}.brand span{font-style:italic;color:var(--gold)}nav{display:flex;gap:30px}nav a{font-size:17px;text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:6px}.quiet-button{border:0;background:transparent;font-size:15px;text-decoration:underline;text-underline-offset:5px}.section{max-width:1280px;margin:auto;padding:70px 6vw}.together{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.75fr);align-items:center;gap:7vw}.portrait-stage{position:relative;width:100%;overflow:hidden;aspect-ratio:941/1672}.portrait-stage>img,.portrait-stage>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.scene-last{opacity:0;transition:opacity 3s}.is-visible .scene-last{opacity:1}.hands-caption{position:absolute;top:72%;left:15%;width:70%;text-align:center}.hands-caption h2{font-size:clamp(28px,3vw,45px);margin-bottom:12px}.hands-caption .eyebrow{font-size:10px;margin-bottom:6px}.hands-caption .text-link{font-size:16px}.intro-note{border-top:1px solid var(--line);padding-top:30px}.intro-note>p:not(.eyebrow){font-size:clamp(30px,3.3vw,48px);line-height:1.2}.intro-note .eyebrow{color:var(--gold)}#petals{position:fixed;inset:0;pointer-events:none;z-index:25;overflow:hidden}.petal{position:absolute;width:23px;height:36px;background-image:url('assets/petals-overlay.png');background-size:190px 285px;background-position:-3px -1px;animation:petal-fall 8s linear forwards}@keyframes petal-fall{from{transform:translateY(-70px) rotate(0deg);opacity:0}10%{opacity:.8}to{transform:translate(90px,110vh) rotate(290deg);opacity:0}}.motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important}.motion-paused .scene-last{transition:none}@media(max-width:700px){body{font-size:18px}.site-header{padding:0 16px;height:66px;gap:12px}nav{gap:15px}nav a{font-size:14px}.brand{font-size:24px}.quiet-button{font-size:12px;max-width:65px;line-height:1.3}.section{padding:35px 18px}.together{display:block;padding:0}.hands-stage{max-width:520px;margin:auto}.intro-note{margin:35px 28px 10px}.hands-caption h2{font-size:32px}.hands-caption .eyebrow{font-size:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.scene-last{opacity:1}#petals{display:none}}
-/* Each portrait keeps the original invitation proportions and its clear text area. */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}.section-heading,.family-heading{text-align:center;margin-bottom:40px}.date-section{text-align:center;padding-top:60px;padding-bottom:95px}.date-section h2{margin-bottom:12px}.scratch-instruction{font-size:18px}.scratch-card{position:relative;width:min(100%,580px);aspect-ratio:2126/740;margin:20px auto 16px}.scratch-card>img{position:absolute;inset:0;width:100%;height:100%}.date-value{position:absolute;inset:32% 8% 14%;display:flex;align-items:center;justify-content:center;font-size:clamp(22px,3vw,36px);color:var(--wine)}#scratch{position:absolute;left:12%;top:36%;width:76%;height:45%;touch-action:none;cursor:crosshair;border-radius:2px;transition:opacity .5s}.scratch-card.revealed #scratch{opacity:0;pointer-events:none}.blessing-section{display:grid;grid-template-columns:1fr .75fr;gap:7vw;align-items:center;border-top:1px solid var(--line)}.blessing-copy{position:absolute;top:26%;left:17%;width:66%;text-align:center}.mantra{font-family:'Noto Serif Devanagari',serif;font-size:clamp(11px,1.1vw,17px);line-height:1.9;color:#79511f;margin-bottom:24%}.blessing-copy h2{font-family:'Noto Serif Devanagari',serif;font-size:clamp(25px,3vw,42px);margin-bottom:22%}.blessing-names{font-size:clamp(36px,4vw,60px);line-height:1.05;color:var(--wine)}.blessing-names em{font-size:.65em;color:var(--gold)}.blessing-note>p:not(.eyebrow){font-size:28px;max-width:400px}.family-section{max-width:960px}.family-stage{max-width:610px;margin:auto;aspect-ratio:951/1654}.family-copy{position:absolute;left:15%;width:70%;top:41%;text-align:center}.family-copy h3{font-size:clamp(31px,4vw,52px);color:var(--wine);margin-bottom:10px}.family-copy p{font-size:clamp(17px,2vw,25px);line-height:1.35}.family-copy .weds{font-style:italic;color:var(--gold);font-size:35px;margin:30px 0}.celebration-section{border-top:1px solid var(--line)}.event-scenes{display:grid;grid-template-columns:1fr 1fr;gap:30px}.ceremony-stage,.reception-stage{aspect-ratio:951/1654}.ceremony-stage{position:relative}.ceremony-copy{position:absolute;inset:0;left:51.2%;transform:translateX(-50%);width:min(86%,560px);text-align:center;pointer-events:none}.ceremony-slot{position:absolute;left:0;width:100%;pointer-events:auto}.ceremony-slot.vidhi{top:22.6%}.ceremony-slot.mangalashtaka{top:38.6%}.ceremony-slot.venue{top:58.2%}.ceremony-slot.link{top:67%}.ceremony-slot h3{font-style:italic;color:var(--wine);font-size:clamp(26px,3.1vw,46px);margin-bottom:4px;line-height:1.1}.ceremony-slot p{font-size:clamp(16px,1.9vw,24px);color:var(--ink);margin:0;line-height:1.25}.ceremony-slot.venue .venue-title{font-size:clamp(20px,2.2vw,30px);color:var(--wine);font-weight:500;margin-bottom:2px;letter-spacing:.02em}.ceremony-slot.venue .venue-sub{font-size:clamp(15px,1.7vw,22px);color:var(--ink)}.ceremony-slot.link .text-link{font-size:clamp(15px,1.6vw,20px);color:var(--ink);display:inline-block;text-underline-offset:5px}.reception-copy{position:absolute;left:13%;width:74%;top:12%;text-align:center;color:#ffecd0}.reception-copy h3{font-size:clamp(36px,4.2vw,64px);font-style:italic;margin-bottom:24px}.reception-copy>p:not(.eyebrow){font-size:clamp(22px,2.6vw,34px)}.reception-copy .venue-copy{margin-top:15%}.attire-section{border-top:1px solid var(--line)}.attire-tabs{display:flex;justify-content:center;gap:30px;margin-bottom:40px}.attire-tabs button{background:none;border:0;border-bottom:1px solid transparent;padding:8px 14px;font-size:22px;color:var(--ink)}.attire-tabs button[aria-selected=true]{color:var(--wine);border-color:var(--wine)}.attire-layout{display:grid;grid-template-columns:1fr .85fr;align-items:center;gap:7vw}.attire-art img{display:block;width:100%;height:auto}.attire-details h3{color:var(--wine);font-size:44px}.attire-details h4{font-size:20px;font-weight:600;margin:28px 0 8px}.attire-details p{font-size:20px}.swatches{display:flex;gap:13px;margin:14px 0}.swatches span{width:34px;height:34px;border-radius:50%;background:var(--swatch);border:1px solid #8c7860}.colour-labels{font-size:14px!important}footer{border-top:1px solid var(--line);text-align:center;padding:70px 20px 55px}.footer-names{font-size:clamp(42px,6vw,80px);color:var(--wine);line-height:1.1;margin-bottom:30px}.footer-names em{color:var(--gold)}footer .quiet-button{display:block;margin:28px auto 0}.scene-video{z-index:2}.scene-video~.hands-caption,.scene-video~.blessing-copy,.scene-video~.family-copy,.scene-video~.ceremony-copy,.scene-video~.reception-copy{z-index:3}
-@media(max-width:700px){.date-section{padding:45px 16px 65px}.blessing-section{display:block;padding:0}.blessing-stage{max-width:520px;margin:auto}.blessing-note{padding:35px 28px}.blessing-note h2{font-size:42px}.blessing-note>p:not(.eyebrow){font-size:24px}.mantra{font-size:12px}.blessing-copy h2{font-size:29px}.blessing-names{font-size:42px}.family-section{padding:30px 0 45px}.family-heading{padding:0 24px}.family-heading h2{font-size:40px}.family-copy h3{font-size:36px}.family-copy p{font-size:18px}.family-copy .weds{margin:20px 0;font-size:30px}.event-scenes{grid-template-columns:1fr;gap:25px}.celebration-section{padding:40px 0}.section-heading{padding:0 25px}.section-heading h2{font-size:40px}.ceremony-stage,.reception-stage{width:min(100%,520px);margin:auto}.ceremony-slot.vidhi{top:22.4%}.ceremony-slot.mangalashtaka{top:38.4%}.ceremony-slot.venue{top:58.0%}.ceremony-slot.link{top:66.8%}.ceremony-slot h3{font-size:clamp(24px,6.8vw,34px);margin-bottom:2px}.ceremony-slot p{font-size:clamp(15px,4.2vw,20px)}.ceremony-slot.venue .venue-title{font-size:clamp(18px,4.8vw,23px);margin-bottom:2px}.ceremony-slot.venue .venue-sub{font-size:clamp(14px,3.8vw,18px)}.ceremony-slot.link .text-link{font-size:clamp(14px,3.8vw,18px)}.reception-copy h3{font-size:48px}.reception-copy>p:not(.eyebrow){font-size:27px}.attire-layout{grid-template-columns:1fr;gap:25px}.attire-art{max-width:520px;margin:auto}.attire-details{padding:15px 10px}.attire-details h3{font-size:37px}.attire-tabs{gap:15px;margin-bottom:25px}.date-value{font-size:23px}}
-.attire-section{max-width:1120px;padding-bottom:90px}.attire-section .section-heading{margin-bottom:25px}.attire-section .section-heading h2{margin-bottom:15px}.attire-section .section-heading>p:last-child{font-size:20px}.attire-tabs{position:sticky;top:76px;background:var(--paper);z-index:10;border-bottom:1px solid var(--line);gap:0;margin:0 auto 40px;max-width:420px}.attire-tabs button{flex:1;font-size:23px;padding:16px 20px;border-bottom-width:2px}.occasion-heading{text-align:center;margin-bottom:40px}.occasion-heading .eyebrow{margin-bottom:8px;color:var(--gold)}.occasion-heading h3{font-size:40px;color:var(--wine);margin-bottom:0}.outfit-group{margin-top:38px}.outfit-group>h4,.occasion-palette>h4{font-size:24px;font-weight:500;border-bottom:1px solid var(--line);padding-bottom:12px;margin:0 0 24px}.outfit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.outfit{margin:0;min-width:0}.outfit-visual{position:relative;overflow:hidden;width:100%;background:#f8e4d8}.outfit-visual img{position:absolute;max-width:none;height:auto;display:block}.outfit figcaption{font-size:20px;line-height:1.25;text-align:center;margin-top:15px;min-height:2.5em}.occasion-palette{margin-top:40px}.palette-colours{display:flex;gap:25px;justify-content:space-between;max-width:650px;margin:30px auto 0}.palette-colour{text-align:center;flex:1}.palette-colour>span{display:block;width:50px;height:50px;border-radius:50%;background:var(--swatch);margin:0 auto 12px;border:1px solid #89785e}.palette-colour>p{font-size:17px;margin:0;line-height:1.3}@media(max-width:700px){.attire-section{padding:40px 20px 60px}.attire-section .section-heading{padding:0}.attire-section .section-heading>p:last-child{font-size:18px}.attire-tabs{top:66px;margin-bottom:30px}.attire-tabs button{font-size:21px;padding:13px 18px}.occasion-heading{margin-bottom:25px}.occasion-heading h3{font-size:33px}.outfit-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;row-gap:25px}.outfit figcaption{font-size:20px}.outfit-group{margin-top:30px}.outfit-group>h4,.occasion-palette>h4{font-size:24px;margin-bottom:18px}.palette-colours{gap:9px}.palette-colour>span{width:38px;height:38px}.palette-colour>p{font-size:14px}}
-.outfit-visual{width:min(100%,120px);margin-inline:auto}@media(max-width:700px){.outfit-visual{width:min(100%,130px)}}
-.outfit-visual{width:min(100%,170px);background:transparent}.outfit-grid{gap:28px}.outfit figcaption{font-size:21px}.occasion-heading{margin-bottom:28px}.outfit-group>h4{color:var(--gold)}@media(max-width:700px){.outfit-visual{width:min(100%,145px)}.outfit-grid{column-gap:12px;row-gap:24px}.outfit figcaption{font-size:19px;margin-top:8px}}
-.lookbook-scroll{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:var(--line) transparent;scrollbar-width:thin}.lookbook-scroll:focus-visible{outline:2px solid var(--wine);outline-offset:6px}.lookbook{width:100%;max-width:850px;margin:auto}.lookbook>img{width:100%;height:auto;display:block}.lookbook-labels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));text-align:center;gap:14px;padding:12px 15px 5px}.lookbook-labels p{font-size:21px;line-height:1.3;margin:0}.lookbook-hint{display:none}.outfit-group{margin-top:30px}.outfit-group>h4{margin-bottom:16px}.occasion-palette{margin-top:40px}@media(max-width:700px){.lookbook{width:640px;max-width:none;margin:0}.lookbook-labels{padding:12px 8px 16px}.lookbook-labels p{font-size:18px}.lookbook-hint{display:block;font-size:14px;font-family:Georgia,serif;color:var(--gold);margin:0 0 12px}.lookbook-scroll{margin-right:-20px;padding-right:20px}}
-
-#opening-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;z-index:3;pointer-events:none}#opening-video.is-playing{opacity:1}.opening-skip{position:absolute;right:20px;top:20px;z-index:4;background:var(--paper);padding:9px 16px;font-size:16px}.entrance.opening .entrance-copy{pointer-events:none}
+:root {
+  --header-height: 76px;
+  --paper: #f8eddd;
+  --ink: #4d3629;
+  --wine: #91243d;
+  --gold: #815b2b;
+  --line: #cfb894;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --devanagari: 'Noto Serif Devanagari', serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 14px); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 20px/1.5 var(--serif); }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; color: inherit; }
+button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible { outline: 2px solid var(--wine); outline-offset: 5px; }
+[hidden] { display: none !important; }
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2, h3, h4 { text-wrap: balance; font-weight: 500; }
+h1, h2, h3 { line-height: 1.1; }
+h2 { font-size: clamp(38px, 5vw, 64px); color: var(--wine); margin-bottom: 22px; }
+p { text-wrap: pretty; }
+.eyebrow { font: 11px/1.8 Georgia, serif; letter-spacing: .15em; text-transform: uppercase; }
+.text-link { display: inline-block; font-size: 18px; text-underline-offset: 6px; padding-block: 9px; }
+.text-link span { display: inline-block; margin-left: 8px; transition: transform .2s; }
+.text-link:hover span { transform: translate(2px, -2px); }
+.text-link:hover { color: var(--wine); }
+.button { display: inline-flex; align-items: center; gap: 22px; justify-content: center; padding: 14px 24px; border: 1px solid var(--wine); background: var(--wine); color: #fff5e6; font-size: 18px; transition: background .2s, transform .2s; }
+.button:hover { background: #731c30; }
+.button:active { transform: translateY(1px); }
+.button:disabled { cursor: progress; background: #75404b; }
+.quiet-button { border: 0; background: none; min-height: 44px; padding: 8px; font: 13px/1.4 Georgia, serif; text-decoration: underline; text-underline-offset: 5px; }
+.quiet-button:hover { color: var(--wine); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: fixed; top: -100px; left: 12px; z-index: 50; padding: 12px; background: var(--paper); }
+.skip:focus { top: 12px; }
+/* A single, uninterrupted door film. Its poster is the exact first frame. */
+.entrance { position: relative; min-height: 100svh; display: grid; place-items: center; background: #2b1e16; overflow: hidden; transition: opacity .45s ease; }
+.door-art { position: relative; width: min(100%, 575px); height: 100svh; min-height: 560px; overflow: hidden; }
+.door-art > img, #opening-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#opening-video { opacity: 0; pointer-events: none; }
+#opening-video.is-playing { opacity: 1; }
+.entrance-copy { position: absolute; left: 50%; bottom: max(6%, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(86%, 450px); text-align: center; padding: 24px 18px; background: #f8edddf5; border: 1px solid #c7a778; box-shadow: 0 10px 35px #3e23182b; transition: opacity .35s; }
+.entrance-copy .eyebrow { margin-bottom: 8px; font-size: 10px; }
+.entrance-copy h1 { font-size: clamp(36px, 5vw, 51px); color: var(--wine); margin-bottom: 10px; }
+.entrance-copy h1 span { font-style: italic; color: var(--gold); }
+.entrance-date { margin-bottom: 20px; font-size: 18px; }
+.opening-skip { position: absolute; right: 20px; top: max(20px, env(safe-area-inset-top)); background: var(--paper); padding: 10px 16px; font-size: 16px; }
+.entrance.opening .entrance-copy { opacity: 0; pointer-events: none; }
+.entrance.fading-out { opacity: 0; pointer-events: none; }
+.at-entrance .site-header, .at-entrance main { display: none; }
+.site-header { position: sticky; top: 0; z-index: 20; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 8px 5vw; border-bottom: 1px solid var(--line); background: var(--paper); }
+.brand { white-space: nowrap; font-size: 28px; text-decoration: none; color: var(--wine); }
+.brand span { font-style: italic; color: var(--gold); }
+nav { display: flex; gap: 30px; }
+nav a { font-size: 17px; padding: 10px 0; text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
+.header-controls { display: flex; align-items: center; }
+.section { max-width: 1280px; margin: auto; padding: 75px 6vw; }
+.section-heading, .family-heading { text-align: center; margin-bottom: 40px; }
+.section-heading > p:last-child { font-size: 21px; }
+.together, .blessing-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .75fr); align-items: center; gap: 7vw; }
+.portrait-stage { position: relative; width: 100%; overflow: hidden; aspect-ratio: 941 / 1672; container-type: inline-size; isolation: isolate; }
+.portrait-stage > img, .portrait-stage > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scene-video { opacity: 0; z-index: 1; pointer-events: none; }
+.scene-video.is-playing { opacity: 1; }
+.hands-caption { position: absolute; top: 72%; left: 15%; width: 70%; text-align: center; z-index: 3; }
+.hands-caption h2 { font-size: 8cqw; margin-bottom: 6px; }
+.hands-caption h2 em { color: var(--gold); }
+.hands-caption .eyebrow { font-size: 2.3cqw; margin-bottom: 8px; }
+.hands-caption .text-link { font-size: 4cqw; }
+.intro-note { border-top: 1px solid var(--line); padding-top: 30px; }
+.intro-note > p:not(.eyebrow):not(.intro-detail) { font-size: clamp(34px, 3.6vw, 51px); line-height: 1.17; margin-bottom: 24px; }
+.intro-detail { font-size: 23px; max-width: 28ch; }
+.intro-note .eyebrow { color: var(--gold); }
+.date-section { text-align: center; padding-top: 50px; padding-bottom: 90px; }
+.date-section h2 { margin-bottom: 12px; }
+.scratch-instruction { font-size: 18px; }
+.scratch-card { position: relative; width: min(100%, 580px); aspect-ratio: 2126 / 740; margin: 20px auto 12px; }
+.scratch-card > img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.date-value { position: absolute; inset: 32% 8% 14%; display: flex; align-items: center; justify-content: center; font-size: clamp(21px, 3vw, 36px); color: var(--wine); font-variant-numeric: tabular-nums; }
+#scratch { position: absolute; left: 12%; top: 36%; width: 76%; height: 45%; touch-action: none; cursor: crosshair; border-radius: 2px; transition: opacity .5s; }
+.scratch-card.revealed #scratch { opacity: 0; pointer-events: none; }
+.date-note { font-size: 17px; margin: 22px 0 4px; }
+.blessing-section { border-top: 1px solid var(--line); }
+.blessing-copy { position: absolute; inset: 0; text-align: center; z-index: 3; }
+.mantra { position: absolute; top: 26.3%; left: 17%; width: 66%; font: 2.95cqw/1.9 var(--devanagari); color: var(--gold); margin: 0; }
+.blessing-copy h2 { position: absolute; top: 39%; left: 20%; width: 60%; font: 8cqw/1.5 var(--devanagari); margin: 0; }
+.blessing-names { position: absolute; top: 52%; height: 14.3%; left: 25%; width: 50%; display: flex; flex-direction: column; justify-content: space-between; margin: 0; font: 7.6cqw/1.25 var(--devanagari); color: var(--wine); }
+.blessing-names .name-join { font-size: 3.2cqw; color: var(--gold); }
+.blessing-note > p:not(.eyebrow) { font-size: 27px; max-width: 28ch; }
+.family-section { max-width: 960px; }
+.family-stage { max-width: 610px; margin: auto; aspect-ratio: 951 / 1654; }
+.family-copy { position: absolute; left: 18%; width: 64%; top: 42%; text-align: center; z-index: 3; }
+.family-copy h3 { font-size: 8.4cqw; color: var(--wine); margin-bottom: 12px; }
+.family-copy p { font-size: 4.7cqw; line-height: 1.4; margin-bottom: 0; }
+.relation { display: block; font-size: .8em; margin-bottom: 5px; }
+.family-copy .weds { font-style: italic; color: var(--gold); font-size: 6cqw; margin: 5cqw 0; }
+.celebration-section { border-top: 1px solid var(--line); }
+.event-scenes { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.ceremony-stage, .reception-stage { aspect-ratio: 951 / 1654; }
+.ceremony-copy { position: absolute; inset: 0; left: 51.2%; transform: translateX(-50%); width: 86%; text-align: center; z-index: 3; }
+.ceremony-slot { position: absolute; left: 0; width: 100%; }
+.ceremony-slot.vidhi { top: 24%; }
+.ceremony-slot.mangalashtaka { top: 40%; }
+.ceremony-slot.venue { top: 57%; }
+.ceremony-slot.link { top: 66%; }
+.ceremony-slot h3 { font-style: italic; color: var(--wine); font-size: 8cqw; margin-bottom: 6px; }
+.ceremony-slot p { font-size: 5cqw; margin: 0; line-height: 1.3; }
+.ceremony-slot .venue-title { font-size: 5.6cqw; color: var(--wine); margin-bottom: 5px; }
+.ceremony-slot .venue-sub { font-size: 4.3cqw; }
+.ceremony-slot .text-link { font-size: 4.1cqw; }
+.reception-copy { position: absolute; left: 13%; width: 74%; top: 14%; text-align: center; color: #fff2de; z-index: 3; text-shadow: 0 2px 9px #39223570; }
+.reception-copy .eyebrow { font-size: 2.5cqw; }
+.reception-copy h3 { font-size: 11.2cqw; font-style: italic; margin-bottom: 5cqw; }
+.reception-time { font-size: 6cqw; }
+.reception-copy .venue-copy { margin-top: 8cqw; }
+.venue-copy p { font-size: 4.9cqw; line-height: 1.35; margin-bottom: 4px; }
+.venue-copy p + p { font-size: 4.2cqw; }
+.reception-copy .text-link { font-size: 3.8cqw; margin-top: 3cqw; }
+.reception-copy a:hover { color: white; }
+/* Lightweight light and water overlays animate only while their scene is visible. */
+.scene-effects { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.lamp-glow { position: absolute; width: 15%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(ellipse, #fff1b6aa 0%, #ffcc6544 28%, transparent 68%); transform: translate(-50%, -50%); animation: glow 3s ease-in-out infinite alternate; }
+.twinkle { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff1b5; box-shadow: 0 0 5px 2px #ffd67b99, 0 0 16px 5px #ffc06155; animation: glow 2.8s ease-in-out infinite alternate; }
+.fairy-lights { position: absolute; top: 2%; left: -2%; width: 104%; height: 14%; overflow: visible; }
+.fairy-lights path { fill: none; stroke: #dca970; stroke-width: .65; opacity: .65; }
+.fairy-lights circle { fill: #ffe6a9; filter: drop-shadow(0 0 3px #ffb94e); animation: glow 2.5s ease-in-out infinite alternate; }
+.fairy-lights circle:nth-child(3n) { animation-delay: -1.5s; }
+.lake-shimmer { position: absolute; left: 24%; right: 3%; top: 78%; height: 6%; opacity: .35; background: repeating-linear-gradient(176deg, transparent 0 10px, #ffefc74d 11px, transparent 13px 19px); mask-image: linear-gradient(90deg, transparent, black, transparent); animation: shimmer 5s ease-in-out infinite alternate; }
+.ceremony-stage .lake-shimmer { top: 78%; left: 28%; right: 20%; height: 4%; }
+@keyframes glow { from { opacity: .35; } to { opacity: .95; } }
+@keyframes shimmer { from { transform: translateX(-5px) scaleX(.95); opacity: .15; } to { transform: translateX(5px) scaleX(1.05); opacity: .5; } }
+.scene-effects * { animation-play-state: paused; }
+.is-in-view .scene-effects * { animation-play-state: running; }
+.attire-section { border-top: 1px solid var(--line); max-width: 1120px; padding-bottom: 90px; }
+.attire-tabs { position: sticky; top: var(--header-height); display: flex; justify-content: center; background: var(--paper); z-index: 10; border-bottom: 1px solid var(--line); margin: 0 auto 40px; max-width: 420px; }
+.attire-tabs button { flex: 1; background: none; border: 0; border-bottom: 2px solid transparent; padding: 15px 20px; font-size: 23px; }
+.attire-tabs button[aria-selected="true"] { color: var(--wine); border-bottom-color: var(--wine); }
+.occasion-heading { text-align: center; margin-bottom: 40px; }
+.occasion-heading .eyebrow { margin-bottom: 8px; color: var(--gold); }
+.occasion-heading h3 { font-size: 38px; color: var(--wine); margin-bottom: 0; }
+.paithani-feature { display: grid; grid-template-columns: .8fr 1fr; align-items: center; gap: 7%; max-width: 730px; margin: 0 auto 60px; }
+.paithani-art { position: relative; overflow: hidden; aspect-ratio: 390 / 1024; }
+.paithani-art img { position: absolute; height: 100%; width: auto; max-width: none; left: 0; top: 0; }
+.paithani-copy h4 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; color: var(--wine); margin-bottom: 20px; }
+.paithani-copy > p:not(.eyebrow) { font-size: 23px; }
+.paithani-copy .attire-note { border-top: 1px solid var(--line); padding-top: 18px; font-style: italic; }
+.outfit-group { margin-top: 40px; }
+.outfit-group > h4, .occasion-palette > h4 { font-size: 24px; color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 12px; margin: 0 0 20px; }
+.lookbook-scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-color: var(--line) transparent; scrollbar-width: thin; }
+.lookbook { width: 100%; max-width: 850px; margin: auto; }
+.lookbook > img { width: 100%; height: auto; display: block; }
+.lookbook-labels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: center; gap: 14px; padding: 12px 15px 5px; }
+.lookbook-labels p { font-size: 21px; line-height: 1.3; margin: 0; }
+.lookbook-hint { display: none; }
+.occasion-palette { margin-top: 40px; }
+.palette-colours { display: flex; gap: 20px; justify-content: space-between; max-width: 650px; margin: 30px auto 0; }
+.palette-colours > div { text-align: center; flex: 1; }
+.palette-colours span { display: block; width: 46px; height: 46px; border-radius: 50%; background: var(--swatch); margin: 0 auto 12px; border: 1px solid #89785e; }
+.palette-colours p { font-size: 17px; margin: 0; line-height: 1.3; }
+footer { border-top: 1px solid var(--line); text-align: center; padding: 70px 20px 55px; }
+.footer-names { font-size: clamp(40px, 6vw, 80px); color: var(--wine); line-height: 1.1; margin-bottom: 20px; }
+.footer-names em { color: var(--gold); }
+footer .quiet-button { display: block; margin: 20px auto 0; }
+#petals { position: fixed; inset: 0; pointer-events: none; z-index: 25; overflow: hidden; }
+.petal { position: absolute; top: -45px; width: var(--size); height: calc(var(--size) * 1.45); border-radius: 90% 12% 80% 20%; background: radial-gradient(ellipse at 25% 20%, #fbd1dc, #df7495 55%, #b94770); box-shadow: inset 1px 1px 3px #ffebee88; animation: petal-fall var(--duration) linear var(--delay) forwards; will-change: transform; }
+@keyframes petal-fall { 0% { transform: translate3d(0, -30px, 0) rotate(0deg); opacity: 0; } 8% { opacity: .8; } 85% { opacity: .65; } 100% { transform: translate3d(var(--drift), 110vh, 0) rotate(var(--rotation)); opacity: 0; } }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after, .page-hidden * { animation-play-state: paused !important; }
+.motion-paused #petals { display: none; }
+.motion-paused { scroll-behavior: auto; }
+@media (max-width: 700px) {
+  body { font-size: 18px; }
+  :root { --header-height: 66px; }
+  .site-header { padding: 6px 14px; min-height: 66px; gap: 10px; }
+  .brand { font-size: 24px; }
+  nav { gap: 15px; }
+  nav a { font-size: 14px; white-space: nowrap; }
+  .header-controls { flex-direction: column; }
+  .header-controls .quiet-button { font-size: 10px; max-width: 58px; padding: 3px; }
+  .section { padding: 42px 20px; }
+  .together, .blessing-section { display: block; padding: 0; }
+  .hands-stage, .blessing-stage { max-width: 520px; margin: auto; }
+  .intro-note { margin: 38px 28px 48px; }
+  .intro-detail { font-size: 22px; }
+  .date-section { padding: 45px 16px 65px; }
+  .date-value { font-size: clamp(20px, 5.6vw, 29px); }
+  .date-note { font-size: 16px; }
+  .blessing-note { padding: 40px 28px 48px; }
+  .blessing-note > p:not(.eyebrow) { font-size: 24px; }
+  .family-section { padding: 36px 0 45px; }
+  .family-heading, .section-heading { padding: 0 24px; }
+  .family-heading h2, .section-heading h2 { font-size: 39px; }
+  .family-stage { max-width: 520px; }
+  .event-scenes { grid-template-columns: 1fr; gap: 28px; }
+  .celebration-section { padding: 44px 0; }
+  .ceremony-stage, .reception-stage { max-width: 520px; margin: auto; }
+  .attire-section { padding: 40px 20px 60px; }
+  .attire-section .section-heading { padding: 0; }
+  .attire-tabs { margin-bottom: 32px; }
+  .attire-tabs button { font-size: 21px; padding: 13px 18px; }
+  .occasion-heading { margin-bottom: 28px; }
+  .occasion-heading h3 { font-size: 33px; }
+  .paithani-feature { gap: 20px; grid-template-columns: .85fr 1fr; margin-bottom: 35px; }
+  .paithani-copy .eyebrow { font-size: 9px; letter-spacing: .1em; }
+  .paithani-copy h4 { font-size: 31px; margin-bottom: 12px; }
+  .paithani-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.4; }
+  .paithani-copy .attire-note { padding-top: 12px; }
+  .lookbook { width: 640px; max-width: none; margin: 0; }
+  .lookbook-labels { padding: 12px 8px 16px; }
+  .lookbook-labels p { font-size: 18px; }
+  .lookbook-hint { display: block; font: 12px/1.6 Georgia, serif; color: var(--gold); margin-bottom: 12px; }
+  .lookbook-scroll { margin-right: -20px; padding-right: 20px; }
+  .palette-colours { gap: 8px; }
+  .palette-colours span { width: 36px; height: 36px; }
+  .palette-colours p { font-size: 14px; }
+}
+@media (max-width: 360px) {
+  nav { gap: 9px; }
+  nav a { font-size: 12px; }
+  .site-header { padding-inline: 10px; gap: 7px; }
+  .brand { font-size: 21px; }
+  .entrance-copy h1 { font-size: 34px; }
+  .paithani-feature { gap: 14px; }
+  .paithani-copy h4 { font-size: 27px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  #petals { display: none; }
+}

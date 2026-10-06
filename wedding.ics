@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//InviteStory//Omkar and Shweta//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:omkar-shweta-20261218@inviteby.top
+DTSTAMP:20261006T000000Z
+DTSTART:20261218T094500Z
+SUMMARY:Omkar & Shweta’s wedding
+LOCATION:Mango Leaf Lake Resort\, Khadakwasla\, Pune
+DESCRIPTION:Vidhi: 3:15 PM onwards\nMangalashtaka: 5:40 PM\nDinner & Recept
+ ion: 8:30 PM onwards
+END:VEVENT
+END:VCALENDAR

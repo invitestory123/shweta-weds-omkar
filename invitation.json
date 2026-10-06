@@ -3,17 +3,20 @@
     "groom": "Omkar Chavan",
     "bride": "Shweta Dagade",
     "groomParents": "Umesh Chavan and Lata Chavan",
-    "brideParents": "Mahadev Dagade and Madhuri Dagade"
+    "brideParents": "Mahadeo Dagade and Madhuri Dagade",
+    "groomDevanagari": "ओंकार",
+    "brideDevanagari": "श्वेता"
   },
   "weddingDate": "18 December 2026",
   "venue": {
     "name": "Mango Leaf Lake Resort",
-    "location": "Khadakwasla, Pune"
+    "location": "Khadakwasla, Pune",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=NDA+Rd,+near+Malai+Mata+Temple,+Khadakwasla,+Khadakwadi,+Maharashtra+411023"
   },
   "events": [
     {
       "name": "Vidhi",
-      "time": "4:00 PM onwards"
+      "time": "3:15 PM onwards"
     },
     {
       "name": "Mangalashtaka",
@@ -28,10 +31,7 @@
   "attire": {
     "wedding": {
       "ladies": [
-        "Paithani saree",
-        "Kanjivaram saree",
-        "Chikankari saree",
-        "Banarasi saree"
+        "Paithani saree"
       ],
       "gentlemen": [
         "Sherwani set",
@@ -76,5 +76,10 @@
     "family": null,
     "ceremony": null,
     "reception": null
-  }
+  },
+  "music": {
+    "src": null,
+    "title": "Jashn-e-Bahaaraa — instrumental"
+  },
+  "weddingDateISO": "2026-12-18"
 }
